@@ -9,7 +9,7 @@ def init_browser():
     return Browser('chrome', **executable_path, headless=False)
 
     
-def scrape_mars_news():
+def scrape():
     
     mars_info ={}
     
