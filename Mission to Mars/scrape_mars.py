@@ -72,7 +72,7 @@ def scrape():
    
 
     # Initialize browser 
-    browser = init_browser()
+    #browser = init_browser()
 
 
     # Visit Mars Weather Twitter through splinter module
@@ -95,23 +95,23 @@ def scrape():
    # browser.quit()
 # Mars Facts
 #def scrape_mars_facts():
-    browser = init_browser()
+   # browser = init_browser()
     # Visit Mars facts url 
     url4 = 'http://space-facts.com/mars/'
     #scrape the table containing facts about the planet including Diameter, Mass, etc.
     mars_df=pd.read_html(url4)[0]
-    mars_df.columns=["Mars","Data"]
-    mars_df
+    df=mars_df.columns=["Mars","Data"]
+    df= mars_df.to_html()
 
 
 
     # Dictionary entry from MARS FACTS
-    mars_info['mars_facts'] = mars_df
+    mars_info['mars_facts'] = df
 
     #return mars_info
 
 #def scrape_mars_hemispheres():
-    browser = init_browser()
+#@browser = init_browser()
 
    # Visit the USGS Astrogeology site
     url5="https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
